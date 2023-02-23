@@ -310,3 +310,30 @@ ul {
     grid-template-columns: 1fr;
   }
 } */
+
+ul li {
+  position: relative;
+}
+
+ul li:after {
+  content: "";
+  background-color: var(--color-blue);
+  height: 2px;
+  width: 0;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transition: all 0.5s ease-in-out;
+  transform: translateX(-50%);
+}
+
+ul li:hover:after {
+  width: 100%;
+}
+
+li.center:hover:after {
+  width: 0;
+}
+
+
+
